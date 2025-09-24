@@ -9,3 +9,6 @@ frames/
 
 # Ignore local png conversion test page.
 png_test.html
+
+# Ignore personal project notes.
+notes.txt
