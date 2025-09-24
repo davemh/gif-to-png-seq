@@ -11,7 +11,7 @@ def gif_to_png_zip(gif_path, out_dir="frames", zip_name="frames.zip"): # (path t
 
     img = Image.open(gif_path)        # Open the source GIF
     frame = 0                         # Fire up a frame counter
-    filenames = []                    # Create an empty list where the filenames with go
+    filenames = []                    # Create an empty list where the filenames will go
 
     # Extract all GIF frames and save them as sequentially-numbered PNG files
     try:
