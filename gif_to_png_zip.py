@@ -30,6 +30,5 @@ def gif_to_png_zip(gif_path, out_dir="frames", zip_name="frames.zip"):
     print(f"Created {zip_name} with {len(filenames)} frames.")
 
 # Allow script to be run directly, or module to be loaded without execution, from the same file.
-
 if __name__ == "__main__":
     gif_to_png_zip("input.gif")
