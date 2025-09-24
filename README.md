@@ -18,4 +18,4 @@ The script will:
 
 ## Use Cases
 - Animation research and analysis.
-- A stepping stone tool on the way to a fork of **gif_shuffler** that includes PNG sequence as an i/o option.
+- A stepping stone tool on the way to a fork of [**gif_shuffler**](https://github.com/arguablykomodo/gif_shuffler) that includes PNG sequence as an i/o option.

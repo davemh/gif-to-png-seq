@@ -1,15 +1,17 @@
-from PIL import Image
-import os
-import zipfile
+# Import libraries
+from PIL import Image    # For working with images
+import os                # For making directories etc.
+import zipfile           # For working with ZIP archives
 
-def gif_to_png_zip(gif_path, out_dir="frames", zip_name="frames.zip"):
+# Define the main function
+def gif_to_png_zip(gif_path, out_dir="frames", zip_name="frames.zip"): # (path to input GIF, output directory for PNGs, ZIP filename)
+    
     # Ensure output directory exists
     os.makedirs(out_dir, exist_ok=True)
 
-    # Open the source GIF
-    img = Image.open(gif_path)
-    frame = 0
-    filenames = []
+    img = Image.open(gif_path)        # Open the source GIF
+    frame = 0                         # Fire up a frame counter
+    filenames = []                    # Create an empty list where the filenames will go
 
     # Extract all GIF frames and save them as sequentially-numbered PNG files
     try:
@@ -21,7 +23,7 @@ def gif_to_png_zip(gif_path, out_dir="frames", zip_name="frames.zip"):
             print(f"Saved {filename}")
             frame += 1
     except EOFError:
-        pass  # no more frames
+        pass  # No more frames
 
     # Compress the PNG sequence into a ZIP archive
     with zipfile.ZipFile(zip_name, "w", zipfile.ZIP_DEFLATED) as zipf:
